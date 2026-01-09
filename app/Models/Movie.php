@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
-class Movie
+use Illuminate\Database\Eloquent\Model;
+
+class Movie extends Model
 {
-    protected $table ='movies';
+    protected $table ='movie';
 
     public $timestamps = true;
 
@@ -12,7 +14,7 @@ class Movie
         'title',
         'description',
         'duration',
-        'release_date',
+        'release',
         'rating',
     ];
 }

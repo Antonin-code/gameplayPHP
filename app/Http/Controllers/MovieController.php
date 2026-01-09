@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
-class MovieController
-{
+use App\Models\Movie;
 
+class MovieController extends Controller
+{
+    public function index()
+    {
+        return response()->json(Movie::all());
+    }
 }
