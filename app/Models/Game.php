@@ -2,9 +2,11 @@
 
 namespace App\Models;
 
-class Game
+use Illuminate\Database\Eloquent\Model;
+
+class Game extends Model
 {
-    protected $table = "games";
+    protected $table = "game";
 
     public $timestamps = true;
 
@@ -14,4 +16,5 @@ class Game
         'playTime',
         'players',
     ];
+
 }

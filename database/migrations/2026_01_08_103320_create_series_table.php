@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('series', function (Blueprint $table) {
             $table->id();
-            $table->integer('title');
+            $table->string('title');
             $table->string('description');
             $table->integer('duration');
             $table->integer('release_date');

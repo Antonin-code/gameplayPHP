@@ -1,15 +1,17 @@
 <?php
 
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\SerieController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/movies', [MovieController::class, 'index']);
-Route::post('/movies/store', [MovieController::class, 'store']);
 
-Route::get('/series', [MovieController::class, 'index']);
-Route::post('/series/store', [MovieController::class, 'store']);
+Route::get('/series', [SerieController::class, 'index']);
 
-Route::get('/games', [MovieController::class, 'index']);
-Route::post('/series/store', [MovieController::class, 'store']);
+
+//Route pour les jeux
+Route::get('/games', [GameController::class, 'index']);
+Route::post('/games/store', [GameController::class, 'store']);
 
 
