@@ -11,7 +11,7 @@ class StoreSerieRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,11 @@ class StoreSerieRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "title" => "required|string",
+            "description" => "required|string",
+            "duration" => "required|string",
+            "release_date" => "required|string",
+            "rating" => "required|integer|min:0|max:10",
         ];
     }
 }

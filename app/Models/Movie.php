@@ -14,7 +14,7 @@ class Movie extends Model
         'title',
         'description',
         'duration',
-        'release',
+        'release_date',
         'rating',
     ];
 }
