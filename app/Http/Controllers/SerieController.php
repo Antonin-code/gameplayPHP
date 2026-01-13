@@ -6,7 +6,13 @@ use App\Models\Serie;
 
 class SerieController extends Controller
 {
+
+
     public function index(){
         return response()->json(Serie::all());
+    }
+
+    public function count(){
+        return response()->json(Serie::count());
     }
 }

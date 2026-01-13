@@ -9,14 +9,18 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
+
+
     public function up(): void
     {
         Schema::create('game', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->bigInteger('playTime');
-            $table->bigInteger('players');
+            $table->integer('playTime');
+            $table->integer('players');
+
+            $table->timestamps();
         });
     }
 

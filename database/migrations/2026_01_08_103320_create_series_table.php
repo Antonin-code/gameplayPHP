@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('description');
-            $table->integer('duration');
-            $table->integer('release_date');
+            $table->time('duration');
+            $table->date('release_date');
             $table->integer('rating');
+
+            $table->timestamps();
         });
     }
 
